@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading-primary">BMI Calculator</h1>
+      <div class="img-box">
+        <button class="js-man-gender-button gender-button man">
+          <img class="gender-icon" src="images/male.png" />
+        </button>
+        <button class="js-woman-gender-button gender-button woman">
+          <img class="gender-icon" src="images/woman.png" />
+        </button>
+      </div>
+      <div class="input-box">
+        <h2 class="heading-secondary">Your Height (cm)</h2>
+        <input
+          class="js-height-input height-input"
+          type="number"
+          placeholder="Your height..."
+        />
+      </div>
+      <div class="input-box">
+        <h2 class="heading-secondary">Your Weight (kg)</h2>
+        <input
+          class="js-weight-input weight-input"
+          type="number"
+          placeholder="Your weight..."
+          onkeydown="
+          handleBMIkeyDown(event);
+          "
+        />
+      </div>
+      <div class="js-result result"></div>
+      <div class="js-weight-category weight-category"></div>
+      <button
+        onclick="
+      calcBMI();
+      "
+        class="js-calculate-button calculate-button"
+      >
+        Calculate
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
